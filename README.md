@@ -8,13 +8,15 @@ Our Capture The Flag event will be exclusively centered around CosmWasm smart co
 
 The winners will be announced on Twitter and receive shoutouts there.
 
-- **Number of challenges:** to be announced
+- **Number of challenges:** 10
 - **Start date:** 10th of July, 2023
 - **End Date:** 17th of July, 2023
 - **Location:** Worldwide! our event will be held online and asynchronously so anyone can participate.
 - **Results submission**: to be announced
 
 Crack all our challenges and show the community that you know your way in security, either as an auditor or a security-minded developer!
+
+Join the [official Telegram channel](https://t.me/+8ilY7qeG4stlYzJi) to get in touch with us!
 
 Follow us on [Twitter](https://twitter.com/SecurityOak) to stay up to date.
 
