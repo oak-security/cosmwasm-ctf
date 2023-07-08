@@ -12,7 +12,7 @@ The winners will be announced on Twitter and receive shoutouts there.
 - **Start date:** 10th of July, 2023
 - **End Date:** 17th of July, 2023
 - **Location:** Worldwide! our event will be held online and asynchronously so anyone can participate.
-- **Results submission**: to be announced
+- **Results submission**: [Google Forms link](https://docs.google.com/forms/d/e/1FAIpQLSfc5Pr7sNCOIUP4aORM9JV4MTJi0Kl7QhPLHQSHX8Bgb9BUCw/viewform)
 
 Crack all our challenges and show the community that you know your way in security, either as an auditor or a security-minded developer!
 
