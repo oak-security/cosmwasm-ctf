@@ -6,7 +6,7 @@ Follow us on Twitter at [@SecurityOak](https://twitter.com/SecurityOak) to recei
 
 Our Capture The Flag event will be exclusively centered around CosmWasm smart contract security. As a participant, you will review the code of several smart contracts. To crack the challenges you will need to spot a wide variety of dangerous security vulnerabilities. 
 
-The winners will be announced on Twitter and receive shoutouts there.
+The winners will be announced on [Twitter](https://twitter.com/securityoak) and receive shoutouts there.
 
 - **Number of challenges:** 10
 - **Start date:** 10th of July, 2023
