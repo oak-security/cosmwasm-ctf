@@ -1,14 +1,20 @@
-# Sample Report template
+# Sample Report Template
 
 ## Challenge 01: *Mjolnir*
 
 ### Description
 
-The bug occurs in ...
-
+_The main description of your finding goes here! Please try to provide the following details, you don't have actually to list questions and answers but include the content within your paragraphs_:
+- _How this kind of vulnerability works at a high level?_
+- _What is incorrect in the code?_
+- _Where is it located? add the relative path to the file and the line number/s_
+- _What could an attacker achieve by successfully exploiting this issue? Who's affected?_
+- _What does an attacker have to do to exploit the issue?_
+  
 ### Recommendation
 
-The fix should be ...
+_Your recommendation to fix the issue goes here. It should solve the described finding and not introduce any new vulnerability.
+Try to be specific about what you would change; you are free to add code here as long as you indicate the file and lines._
 
 ### Proof of concept
 
