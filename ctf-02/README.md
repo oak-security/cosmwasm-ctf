@@ -20,7 +20,7 @@ Please check the challenge's [integration_tests](./src/integration_test.rs) for 
 - The contract is newly instantiated with zero funds.
 
 **:star: Goal for the challenge:**
-- Demonstrate how a unprivileged user can achieve an unfair amount of voting power.
+- Demonstrate how an unprivileged user can achieve an unfair amount of voting power.
 
 ## Scoring
 

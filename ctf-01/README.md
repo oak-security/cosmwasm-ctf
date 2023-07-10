@@ -19,7 +19,7 @@ Please check the challenge's [integration_tests](./src/integration_test.rs) for 
 - `USER` deposits funds into the contract.
 
 **:star: Goal for the challenge:**
-- Demonstrate how a unprivileged user can drain all funds inside the contract.
+- Demonstrate how an unprivileged user can drain all funds inside the contract.
 
 ## Scoring
 

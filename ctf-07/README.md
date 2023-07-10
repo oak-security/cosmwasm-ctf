@@ -22,7 +22,7 @@ Please check the challenge's [integration_tests](./src/integration_test.rs) for 
 - The owner role is assigned to the `ADMIN` address
 
 **:star: Goal for the challenge:**
-- Demonstrate how a unprivileged user can drain all the contract's funds.
+- Demonstrate how an unprivileged user can drain all the contract's funds.
 
 ## Scoring
 

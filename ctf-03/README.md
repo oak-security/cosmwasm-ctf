@@ -29,7 +29,7 @@ Please check the challenge's [integration_tests](./src/integration_test.rs) for 
 - Proxy contract is configured to flash loan contract.
 
 **:star: Goal for the challenge:**
-- Demonstrate how a unprivileged user can drain all funds from the flash loan contract.
+- Demonstrate how an unprivileged user can drain all funds from the flash loan contract.
 
 ## Scoring
 
