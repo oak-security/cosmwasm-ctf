@@ -20,6 +20,27 @@ Join the [official Telegram channel](https://t.me/+8ilY7qeG4stlYzJi) to get in t
 
 Follow us on [Twitter](https://twitter.com/SecurityOak) to stay up to date.
 
-## Questions? 
+## Getting started
+
+### Quick links
+
+- [POINTS.md](POINTS.md) contains the overall points of each challenges.
+- [SAMPLE_REPORT_TEMPLATE.md](SAMPLE_REPORT_TEMPLATE.md) contains a sample report template in Markdown format.
+
+### Running test case
+
+1. Navigate into challenge folder.
+
+```bash
+cd ctf-01/
+```
+
+2. Run tests
+
+```bash
+cargo test
+```
+
+## Questions?
 
 Just open an issue in this repository to get an answer from our team.
