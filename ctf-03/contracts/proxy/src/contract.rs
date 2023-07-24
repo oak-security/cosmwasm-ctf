@@ -55,6 +55,9 @@ pub fn request_flash_loan(
 ) -> Result<Response, ContractError> {
     let config = CONFIG.load(deps.storage)?;
 
+    // Ensure recipient address is valid
+    let recipient = deps.api.addr_validate(recipient.as_ref()).unwrap();
+
     // Disallow calling flash loan addr
     if recipient == config.flash_loan_addr {
         return Err(ContractError::CallToFlashLoan {});

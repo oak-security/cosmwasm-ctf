@@ -11,7 +11,7 @@ use crate::state::{BALANCES, OWNER, THRESHOLD};
 use cw_utils::must_pay;
 
 pub const DENOM: &str = "uawesome";
-pub const TOP_DEPOSITOR: Item<Addr> = Item::new("address");
+pub const TOP_DEPOSITOR: Item<Addr> = Item::new("top_depositor");
 
 #[cfg_attr(not(feature = "library"), entry_point)]
 pub fn instantiate(

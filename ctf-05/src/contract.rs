@@ -127,7 +127,7 @@ pub fn accept_owner(deps: DepsMut, info: MessageInfo) -> Result<Response, Contra
     let state = STATE.load(deps.storage)?;
 
     if state.proposed_owner != Some(info.sender.clone()) {
-        ContractError::Unauthorized {};
+        return Err(ContractError::Unauthorized {});
     }
 
     STATE.update(deps.storage, |mut state| -> StdResult<_> {

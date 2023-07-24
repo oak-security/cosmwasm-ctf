@@ -24,7 +24,7 @@ debug-assertions = false
 codegen-units = 1
 panic = 'abort'
 incremental = false
-overflow-checks = false
+overflow-checks = true
 
 [features]
 # for more explicit tests, cargo test --features=backtraces

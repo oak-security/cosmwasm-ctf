@@ -1,7 +1,7 @@
 use cosmwasm_schema::cw_serde;
 
 use cosmwasm_std::Addr;
-use cw_storage_plus::Item;
+use cw_storage_plus::{Item, Map};
 
 #[cw_serde]
 pub struct Config {
@@ -19,5 +19,14 @@ pub struct Whitelist {
     pub users: Vec<String>,
 }
 
+#[cw_serde]
+pub struct MintedNFT {
+    /// NFT identifier value
+    pub nft_id: u128,
+    /// Timestamp
+    pub timestamp: u64,
+}
+
 pub const CONFIG: Item<Config> = Item::new("config");
 pub const WHITELIST: Item<Whitelist> = Item::new("whitelist");
+pub const MINT_PER_USER: Map<&Addr, Vec<MintedNFT>> = Map::new("mint_per_user");

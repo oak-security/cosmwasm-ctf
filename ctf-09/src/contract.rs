@@ -177,9 +177,9 @@ pub fn claim_rewards(deps: DepsMut, info: MessageInfo) -> Result<Response, Contr
 
 pub fn update_rewards(user: &mut UserRewardInfo, state: &State) {
     // no need update amount if zero
-    if user.staked_amount.is_zero() {
-        return;
-    }
+    // if user.staked_amount.is_zero() {
+    //     return;
+    // }
 
     // calculate pending rewards
     let reward = (state.global_index - user.user_index) * user.staked_amount;

@@ -10,6 +10,7 @@ use crate::error::ContractError;
 use crate::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
 use crate::state::{Balance, Config, BALANCES, CONFIG};
 
+const DECIMAL_OFFSET: u32 = 1;
 pub const DENOM: &str = "uawesome";
 
 #[cfg_attr(not(feature = "library"), entry_point)]
@@ -54,12 +55,12 @@ pub fn mint(deps: DepsMut, env: Env, info: MessageInfo) -> Result<Response, Cont
     let total_assets = contract_balance.amount - amount;
     let total_supply = config.total_supply;
 
-    // share = asset * total supply / total assets
-    let mint_amount = if total_supply.is_zero() {
-        amount
-    } else {
-        amount.multiply_ratio(total_supply, total_assets)
-    };
+    // share = asset * (total supply + 10^offset) / (total assets + 1)
+    // ref: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/f347b410cf6aeeaaf5197e1fece139c793c03b2b/contracts/token/ERC20/extensions/ERC4626.sol#L226-L231
+    let mint_amount = amount.multiply_ratio(
+        total_supply + Uint128::new(10_u32.pow(DECIMAL_OFFSET).into()),
+        total_assets + Uint128::one(),
+    );
 
     if mint_amount.is_zero() {
         return Err(ContractError::ZeroAmountNotAllowed {});
@@ -100,8 +101,13 @@ pub fn burn(
     let total_assets = contract_balance.amount;
     let total_supply = config.total_supply;
 
-    // asset = share * total assets / total supply
-    let asset_to_return = shares.multiply_ratio(total_assets, total_supply);
+    // asset = share * (total assets + 1) / (total supply * 10^3)
+    // ref: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/f347b410cf6aeeaaf5197e1fece139c793c03b2b/contracts/token/ERC20/extensions/ERC4626.sol#L233-L238
+
+    let asset_to_return = shares.multiply_ratio(
+        total_assets + Uint128::one(),
+        total_supply + Uint128::new(10_u32.pow(DECIMAL_OFFSET).into()),
+    );
 
     if asset_to_return.is_zero() {
         return Err(ContractError::ZeroAmountNotAllowed {});

@@ -16,4 +16,5 @@ pub enum ExecuteMsg {
 pub enum QueryMsg {
     Config {},
     Whitelist {},
+    MintPerUser { user: String, limit: Option<u32> },
 }

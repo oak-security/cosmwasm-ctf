@@ -73,10 +73,14 @@ pub fn withdraw(
     deps: DepsMut,
     env: Env,
     info: MessageInfo,
-    ids: Vec<u64>,
+    mut ids: Vec<u64>,
 ) -> Result<Response, ContractError> {
     let mut lockups: Vec<Lockup> = vec![];
     let mut total_amount = Uint128::zero();
+
+    // Ensure no duplicate ids 
+    ids.sort();
+    ids.dedup();
 
     // fetch vaults to process
     for lockup_id in ids.clone() {
