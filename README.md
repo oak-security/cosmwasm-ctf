@@ -2,6 +2,18 @@
 
 Follow us on Twitter at [@SecurityOak](https://twitter.com/SecurityOak) to receive the latest information on the event. All the details will be first published there and then compiled in this `README`.
 
+The CTF ended on July 17th. Thanks to everyone for participating in it!
+
+## Winners
+
+1. [@forbiddnstars](https://twitter.com/forbiddnstars)
+2. [@CruncherDefi](https://twitter.com/CruncherDefi)
+3. [@jc0f0116](https://twitter.com/jc0f0116)
+4. [@LeTurt_](https://twitter.com/LeTurt_)
+5. [@i_be_jc](https://twitter.com/i_be_jc) from [@bearmarketlabs](https://twitter.com/bearmarketlabs)
+
+Here is the [official announcement](https://twitter.com/SecurityOak/status/1684462534244327424) in Twitter.
+
 ## Key information
 
 Our Capture The Flag event will be exclusively centered around CosmWasm smart contract security. As a participant, you will review the code of several smart contracts. To crack the challenges you will need to spot a wide variety of dangerous security vulnerabilities. 
