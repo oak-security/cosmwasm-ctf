@@ -55,7 +55,7 @@ pub fn receive_cw20(
     cw20_msg: Cw20ReceiveMsg,
 ) -> Result<Response, ContractError> {
     let config = CONFIG.load(deps.storage)?;
-    let current_proposal = PROPOSAL.load(deps.storage)?;
+    let mut current_proposal = PROPOSAL.load(deps.storage)?;
 
     match from_binary(&cw20_msg.msg) {
         Ok(Cw20HookMsg::CastVote {}) => {
@@ -71,12 +71,15 @@ pub fn receive_cw20(
                 return Err(ContractError::VotingWindowClosed {});
             }
 
+            current_proposal.votes_for += cw20_msg.amount;
+            PROPOSAL.save(deps.storage, &current_proposal)?;
+
             Ok(Response::default()
                 .add_attribute("action", "Vote casting")
                 .add_attribute("voter", cw20_msg.sender)
                 .add_attribute("power", cw20_msg.amount))
         }
-        _ => Ok(Response::default()),
+        _ => Err(ContractError::Unauthorized {}),
     }
 }
 
@@ -93,6 +96,7 @@ pub fn propose(deps: DepsMut, env: Env, info: MessageInfo) -> Result<Response, C
         &Proposal {
             proposer: info.sender.clone(),
             timestamp: env.block.time,
+            votes_for: Uint128::zero(),
         },
     )?;
 
@@ -113,7 +117,7 @@ pub fn resolve_proposal(
     if current_proposal
         .timestamp
         .plus_seconds(config.voting_window)
-        < env.block.time
+        > env.block.time
     {
         return Err(ContractError::ProposalNotReady {});
     }
@@ -124,16 +128,9 @@ pub fn resolve_proposal(
             msg: to_binary(&Cw20QueryMsg::TokenInfo {})?,
         }))?;
 
-    let balance: BalanceResponse = deps.querier.query(&QueryRequest::Wasm(WasmQuery::Smart {
-        contract_addr: config.voting_token.to_string(),
-        msg: to_binary(&Cw20QueryMsg::Balance {
-            address: env.contract.address.to_string(),
-        })?,
-    }))?;
-
     let mut response = Response::new().add_attribute("action", "resolve_proposal");
 
-    if balance.balance >= (vtoken_info.total_supply / Uint128::from(3u32)) {
+    if current_proposal.votes_for >= (vtoken_info.total_supply / Uint128::from(3u32)) {
         CONFIG.update(deps.storage, |mut config| -> StdResult<_> {
             config.owner = current_proposal.proposer;
             Ok(config)
