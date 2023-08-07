@@ -101,7 +101,7 @@ pub fn burn(
     let total_assets = contract_balance.amount;
     let total_supply = config.total_supply;
 
-    // asset = share * (total assets + 1) / (total supply * 10^3)
+    // asset = share * (total assets + 1) / (total supply * 10^offset)
     // ref: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/f347b410cf6aeeaaf5197e1fece139c793c03b2b/contracts/token/ERC20/extensions/ERC4626.sol#L233-L238
 
     let asset_to_return = shares.multiply_ratio(
