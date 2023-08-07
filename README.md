@@ -10,7 +10,7 @@ The CTF ended on July 17th. Thanks to everyone for participating in it!
 2. [@CruncherDefi](https://twitter.com/CruncherDefi)
 3. [@jc0f0116](https://twitter.com/jc0f0116)
 4. [@LeTurt_](https://twitter.com/LeTurt_)
-5. [@i_be_jc](https://twitter.com/i_be_jc) from [@bearmarketlabs](https://twitter.com/bearmarketlabs)
+5. [@i_be_jc](https://twitter.com/i_be_jc)
 
 Note that the three best submissions had all identified all security vulnerabilities. We used the quality and readability of the report as a tie-breaker to determine the winner. 🎉
 
