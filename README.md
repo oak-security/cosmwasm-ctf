@@ -44,6 +44,12 @@ cd ctf-01/
 cargo test
 ```
 
+## Solutions
+
+We recommend that you give your best before peeking into the answers to enhance your learning. The official writeups of all the ten challenges can be found here: [part 1 (1-5)](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-1-a40c6e506b49) and [part 2 (6-10)](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-2-cb3e9b297c0).
+ 
+If you want to check the base challenges, [check this other branch](../../tree/main). If you want to directly check the proof of concept exploits, [check this branch](../../tree/poc-exploit).
+
 ## Questions?
 
 Just open an issue in this repository to get an answer from our team.
