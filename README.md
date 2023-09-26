@@ -4,6 +4,29 @@ Follow us on Twitter at [@SecurityOak](https://twitter.com/SecurityOak) to recei
 
 The CTF ended on July 17th. Thanks to everyone for participating in it!
 
+## Writeups
+
+1. [Capture The Flag ️Writeups — AwesomWasm 2023 Pt. 1](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-1-a40c6e506b49)
+2. [Capture The Flag ️Writeups — AwesomWasm 2023 Pt. 2](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-2-cb3e9b297c0)
+
+## Navigation
+
+1. To get started with the challenges, please visit the [main](https://github.com/oak-security/cosmwasm-ctf/tree/main) branch.
+2. To view the proof of concept for the challenges, please visit the [poc-exploit](https://github.com/oak-security/cosmwasm-ctf/tree/poc-exploit) branch. The proof of concept is written as an `exploit()` test case and can be found in the `exploit.rs` file.
+3. To view the fixed versions of the challenges, please visit the [fixed](https://github.com/oak-security/cosmwasm-ctf/tree/fixed) branch. All proof of concept test cases are prefixed with `#[ignore="bug is patched"]`, so they will not be automatically executed when running `cargo test`.
+
+## Winners
+
+1. [@forbiddnstars](https://twitter.com/forbiddnstars)
+2. [@CruncherDefi](https://twitter.com/CruncherDefi)
+3. [@jc0f0116](https://twitter.com/jc0f0116)
+4. [@LeTurt_](https://twitter.com/LeTurt_)
+5. [@i_be_jc](https://twitter.com/i_be_jc)
+
+Note that the three best submissions had all identified all security vulnerabilities. We used the quality and readability of the report as a tie-breaker to determine the winner. 🎉
+
+Here is the [official announcement](https://twitter.com/SecurityOak/status/1684462534244327424) in Twitter.
+
 ## Key information
 
 Our Capture The Flag event will be exclusively centered around CosmWasm smart contract security. As a participant, you will review the code of several smart contracts. To crack the challenges you will need to spot a wide variety of dangerous security vulnerabilities. 
@@ -43,13 +66,6 @@ cd ctf-01/
 ```bash
 cargo test
 ```
-
-## Solutions
-
-We recommend that you give your best before peeking into the answers to enhance your learning. The official writeups of all the ten challenges can be found here: [part 1 (1-5)](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-1-a40c6e506b49) and [part 2 (6-10)](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-2-cb3e9b297c0).
- 
-If you want to check the base challenges, [check this branch](../../tree/main). If you want to look into the fixed code, [check this other](../../tree/fixed).
-
 
 ## Questions?
 
