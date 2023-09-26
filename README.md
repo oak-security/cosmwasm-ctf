@@ -4,6 +4,17 @@ Follow us on Twitter at [@SecurityOak](https://twitter.com/SecurityOak) to recei
 
 The CTF ended on July 17th. Thanks to everyone for participating in it!
 
+## Writeups
+
+1. [Capture The Flag ️Writeups — AwesomWasm 2023 Pt. 1](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-1-a40c6e506b49)
+2. [Capture The Flag ️Writeups — AwesomWasm 2023 Pt. 2](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-2-cb3e9b297c0)
+
+## Navigation
+
+1. To get started with the challenges, please visit the [main](https://github.com/oak-security/cosmwasm-ctf/tree/main) branch.
+2. To view the proof of concept for the challenges, please visit the [poc-exploit](https://github.com/oak-security/cosmwasm-ctf/tree/poc-exploit) branch. The proof of concept is written as an `exploit()` test case and can be found in the `exploit.rs` file.
+3. To view the fixed versions of the challenges, please visit the [fixed](https://github.com/oak-security/cosmwasm-ctf/tree/fixed) branch. All proof of concept test cases are prefixed with `#[ignore="bug is patched"]`, so they will not be automatically executed when running `cargo test`.
+
 ## Winners
 
 1. [@forbiddnstars](https://twitter.com/forbiddnstars)
@@ -55,12 +66,6 @@ cd ctf-01/
 ```bash
 cargo test
 ```
-
-## Solutions
-
-We recommend that you give your best before peeking into the answers to enhance your learning. The official writeups of all the ten challenges can be found here: [part 1 (1-5)](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-1-a40c6e506b49) and [part 2 (6-10)](https://medium.com/oak-security/capture-the-flag-%EF%B8%8Fwriteups-awesomwasm-2023-pt-2-cb3e9b297c0).
- 
-If you want to directly check the proof of concept exploits, [check this branch](../../tree/poc-exploit). On the other hand, if you want to look into the fixed code, [check this other branch](../../tree/fixed).
 
 ## Questions?
 
