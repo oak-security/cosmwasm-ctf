@@ -1,5 +1,5 @@
 > [!NOTE]
-> This file contains the information related to the Awesomwasm 2023 live event. If you want to work on the CTF, please check the [root README](../)
+> This file contains the information related to the Awesomwasm 2023 live event. If you want to work on the CTF, please check the [root README](https://github.com/oak-security/cosmwasm-ctf/tree/main)
 
 ---
 
